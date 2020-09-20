@@ -21,7 +21,7 @@ resource "aws_instance" "myec2" {
 }
 
 resource "aws_security_group" "web_traffic" {
-  name = "secure server"
+  name = "not so secure server"
   dynamic "ingress" {
     iterator = port
     for_each = var.ingress_rules
